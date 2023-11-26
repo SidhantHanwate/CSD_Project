@@ -1,0 +1,17 @@
+//floor and ceil of floating point integer
+
+int main(){
+	float f;
+	
+	progout("Enter a float number: ");
+	progin(f);
+
+	int a1 = f;
+	
+	progout("The floor of ");
+	progout(f);
+	progout(" is ");
+	progout(a1);
+
+	return 0;
+}

@@ -1,0 +1,13 @@
+void global(){
+    int a=5;
+    int b = 6;
+    int c = a+b;
+}
+
+int main(){
+    global();
+    c = 10;
+    int d = 5;
+    int e = a+b+c+d;
+    progout(e);
+}

@@ -1,0 +1,35 @@
+// Combinations using recursion
+
+int nCr(int n, int r){
+	if(n < r){
+		return 0;
+	}
+	elif(n == r){
+		return 1;
+	}
+	else{
+		if(r==0){
+			return 1;
+		}
+		return nCr(n-1, r-1) + nCr(n-1, r); 
+	}
+}
+
+int main(){
+
+	progout("Enter n: ");
+	int n;
+	progin(n);
+
+	progout("Enter r: ");
+	int r;
+	progin(r);
+
+	int res = nCr(n, r);
+
+	progout("nCr: ");
+	progout(res);
+	progout("\n");
+
+    return 0;
+}

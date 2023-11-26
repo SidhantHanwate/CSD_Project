@@ -1,0 +1,19 @@
+// Ascii values 
+int main(){
+	char arr[5] = {'v', 'w', 'x', 'y', 'z'};
+	int i;
+	for(i=0; i<5; i=i+1){
+		progout("Ascii value of ");
+		progout(arr[i]);
+		progout(" is ");
+		int temp = arr[i];
+		progout(temp);
+		progout(".\n");
+	}
+	
+	string str = "This is a string.\n";
+	
+	progout(str);
+
+	return 0;
+}

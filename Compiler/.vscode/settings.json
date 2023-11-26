@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "hll": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp"
+    }
+}

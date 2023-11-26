@@ -1,0 +1,11 @@
+add: INT
+- arg INT a
+- arg INT b
+@t0 = a + b INT
+return @t0 INT
+end:
+
+print_string: void
+output "Hi" STRING
+end:
+

@@ -1,0 +1,15 @@
+int main(){
+    int n = 5;
+    int prev2 = 0; //first fibonacci number
+    int prev1 = 1; //second fibonacci number
+    int cur = 0;
+    int i; // in order to iterate and find from 2nd fibonacci number
+    progout(prev1); //printing first fibonacci number
+    progout(prev2); //printing 2nd fibonacci number
+    for(i=2;i<=5;i=i+1){
+        cur = prev1+prev2;
+        progout(cur);
+        prev2 = prev1;
+        prev1 = cur;
+    }
+}

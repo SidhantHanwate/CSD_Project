@@ -1,0 +1,27 @@
+global: void
+@t0 = 5 INT
+- INT a
+a = @t0 INT
+@t1 = 6 INT
+- INT b
+b = @t1 INT
+@t2 = a + b INT
+- INT c
+c = @t2 INT
+end:
+
+main: INT
+@t2 = @call global void 0
+@t3 = 10 INT
+c = @t3 INT
+@t4 = 5 INT
+- INT d
+d = @t4 INT
+@t5 = a + b INT
+@t6 = @t5 + c INT
+@t5 = @t6 + d INT
+- INT e
+e = @t5 INT
+output e INT
+end:
+

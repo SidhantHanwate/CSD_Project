@@ -1,0 +1,22 @@
+// Check whether it's a prime number 
+int main(){
+
+	int number;
+
+	progout("Enter the number: ");
+	progin(number);
+
+    int i;
+    for (i = 2; i < number; i=i+1) {
+        if (number % i != 0){
+            continue;
+        }
+        else{
+            progout("It is not a prime number.\n");
+			return 0;
+		}
+    }
+	progout("It is a prime number.\n");
+
+    return 0;
+}
