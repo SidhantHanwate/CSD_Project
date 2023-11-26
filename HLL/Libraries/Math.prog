@@ -1,0 +1,44 @@
+Class Math{
+    int division(int num1, int num2) { 
+        if (num1 == 0) 
+            return 0; 
+        if (num2 == 0) 
+            return INT_MAX; 
+        bool negResult = false; 
+        if (num1 < 0) { 
+            num1 = -num1 ; 
+            if (num2 < 0) 
+                num2 = - num2 ;  
+            else
+                negResult = true; 
+        } 
+        else if (num2 < 0)  { 
+            num2 = - num2 ; 
+            negResult = true;  
+        } 
+
+        int quotient = 0; 
+        while (num1 >= num2)  { 
+            num1 = num1 - num2 ; 
+            quotient ; 
+        } 
+        if (negResult) 
+            quotient = - quotient ; 
+        return quotient ; 
+    }
+
+    int multiply(int num1,int num2){
+        int mul=0;
+        for(int i=1;i<=num2;i++){
+            mul=mul+num1;
+        }
+        return mul;
+    }
+    int add(int num1,int num2){
+        return num1+num2;
+    }
+    int sub(int num1,int num2){
+        return num1-num2;
+    }
+}
+

@@ -1,0 +1,11 @@
+class Array {
+    /** Constructs a new Array of the given size. */
+    Array (int size) {
+        return Memory.alloc(size);
+    }
+    /** De-allocates the array and frees its space. */
+     void dispose() {
+         Memory.deAlloc(this);
+        return;
+    }
+}

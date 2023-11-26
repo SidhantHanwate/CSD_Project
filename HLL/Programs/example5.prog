@@ -1,0 +1,41 @@
+#include <ProgInOut>
+#include <String>
+int main() {
+int que[100];
+int q=0;
+string showmsg = "Operations : 1. Push back to the Queue 2. Pop from the front queue" ;
+  while(1){
+	progout("Queue: ");
+	int i;
+	for(int i=0;i<qs;i=i+1){
+		progout(que[i]);
+		progout(" ");
+	}
+	String.newline();
+	progout(showmsg);
+
+	int operation;
+	progin(operation);
+	
+	switch(operation){
+		case(1):
+			progout("Enter number ");
+			int p;
+			input(p);
+			que[q] = p;
+			q = q+1;
+			break;
+		case(2):
+			for(i=1; i<q; i=i+1)
+                  {
+				que[i-1] = que[i];
+			}
+			q = q-1;
+			break;
+           case(3):
+                 break;
+     }
+  }
+  return 0;
+}
+
