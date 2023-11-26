@@ -14,7 +14,6 @@ OPERATIONS::OPERATIONS()
         {"sll", 0b000000},
         {"srl", 0b000000},
         {"mac", 0b010100},
-        
 
         // I - Type
         {"lw", 0b100011},
@@ -99,8 +98,8 @@ OPERATIONS::OPERATIONS()
         {"bne", 'B'},
         {"blt", 'B'},
         {"bge", 'B'},
-        {"bltu", 'B'},
-        {"bgeu", 'B'},
+        {"ble", 'B'},
+        {"bgt", 'B'},
 
         // U - Type
         //{"lui", 'U'},
@@ -450,7 +449,6 @@ int REGISTERS::extractImmediate(vector<int> &regs, string reg, unsigned char typ
             else
                 immediate = stoi(imm_reg);
         }
-        cout << immediate << endl;
         regs.resize(regs.size() + 1, immediate);
         next++;
 

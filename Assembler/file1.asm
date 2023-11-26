@@ -4,7 +4,26 @@
 .text
 jal main
 main:
-addi $t0,$zero,5
+mac $t0,$t1
+addi $t0,$zero,8224
+addi $t1,$zero,8196
+add $t1,$fp,$t1
+sw $t0,0($t1)
+addi $t0,$zero,8736
+addi $t1,$zero,8200
+add $t1,$fp,$t1
+sw $t0,0($t1)
+addi $t0,$zero,8768
+addi $t1,$zero,8204
+add $t1,$fp,$t1
+sw $t0,0($t1)
+addi $t0,$zero,9280
+addi $t1,$zero,8192
+add $t1,$fp,$t1
+sw $t0,0($t1)
+addi $sp,$zero,9280
+add $sp,$sp,$fp
+addi $t0,$zero,8
 sw $t0,0($sp)
 addi $sp,$sp,4
 addi $sp,$sp,-4
@@ -28,7 +47,7 @@ add $t1,$t1,$fp
 lw $t1,0($t1)
 addi $t1,$t1,4
 sw $t0,0($t1)
-addi $t0,$zero,6
+addi $t0,$zero,2
 sw $t0,0($sp)
 addi $sp,$sp,4
 addi $sp,$sp,-4
@@ -107,5 +126,6 @@ add $a0,$t0,$zero
 addi $sp,$sp,4
 addi $v0,$zero,4
 syscall
-__END__:
+j _END_
+_END_:
 nop
