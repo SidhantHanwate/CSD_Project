@@ -1,8 +1,3 @@
-
-
-
-
-
 .section
 .data
 .section
