@@ -1,0 +1,123 @@
+#include <Math>
+#include <Array>
+class String{
+    Array buffer;
+    int buffer_len;
+    int str_len;
+    /* Constructs a new empty String with a maximum length of maxLength. */
+    String (int maxLength) {
+        if( maxLength = 0 ) {
+            let maxLength = 1;
+        }
+        buffer = new Array(maxLength);
+        buffer_len = maxLength;
+        str_len = 0;
+        return this;
+    }
+    /* De-allocates the string and frees its space. */
+    void dispose() 
+   {
+        Array.dispose(buffer);
+        return;
+    }
+    /* Returns the current length of this String. */
+    int length() 
+   {
+        return str_len;
+    }
+    /* Returns the character at location j. */
+    char charAt(int j) 
+    {
+        return buffer[j];
+    }
+    /* Sets the jth character of this string to be c. */
+   void setCharAt(int j, char c) {
+        buffer[j] = c;
+        return;
+    }
+    /* Appends the character c to the end of this String.
+     *  Returns this string as the return value. */
+   String appendChar(char c) {
+        if( str_len < buffer_len ) {
+            buffer[str_len] = c;
+            str_len = str_len + 1;
+        }
+        return this;
+    }
+    /* Erases the last character from this String. */
+   void eraseLastChar() {
+        if( str_len > 0 ) {
+            str_len = str_len - 1;
+        }
+        return;
+    }
+    /* Returns the integer value of this String until the first non numeric character. */
+     int intValue() {
+        int int_val;
+        int i;
+        bool neg;
+        
+        int_val = 0;
+        
+        if( (str_len > 0) & (buffer[0] = 45) ) {     
+            // '-'
+            neg = true;
+            i = 1;
+        }
+        else {
+            neg = false;
+            i = 0;
+        }
+        while( (i < str_len) & String.is_digit(buffer[i]) ) {
+            int_val = (int_val * 10) + String.digit_val(buffer[i]);
+            i = i + 1;
+        }
+        if( neg ) {
+            return -int_val;
+        }
+        else {
+            return int_val;
+        }
+    } 
+  /* Returns whether the given char is a digit or not */
+    bool is_digit(char c) {
+        return ~(c < 48) & ~(c > 57);
+    }
+ /* Returns the integer value of the given digit character */
+    int digit_val(char c) {
+        return c - 48;
+    }
+/* Returns the char value of the given integer (must have 0<=value<=9) */
+   char digit_char(int i) {
+        return i + 48;
+    }
+
+/** Return integer value of string **/
+   int stoi(String p){
+      int len = p.length();
+      int num = 0;
+      for(int i=0;i<len;i=i+1)
+      {  
+        char c = p.charAt(i);
+        int temp = digit_val(c);
+        num = Math.multiply(num,10) + temp;
+      }
+      return num;
+  }
+    
+    /** Returns the new line character. */
+    char newLine() 
+    {
+        return 128;
+    }
+    /** Returns the backspace character. */
+    char backSpace() {
+        return 129;
+    }
+    /** Returns the double quote (") character. */
+    char doubleQuote()
+   {
+        return 34;
+    }
+}
+

@@ -1,0 +1,35 @@
+#include <ProgInOut>
+#include <Math>
+#include <String>
+int main()
+{
+    int a;
+    int b;
+    int c;
+    progout("Enter a value = ");
+  String.newline();
+    progin(a);
+    progout("Enter b value = ");
+  String.newline();
+    progin(b);
+    progout("Select the operation: 1. Add(+) 2. Subtract (-) 3. Bitwise And (&) 4. Multiply (*)");
+  String.newline();
+    int op;
+    progin(op);
+    progout("Result: ");
+    switch(op){
+        case(1): c=a+b;
+                          break;
+        case(2): c=a-b;
+                          break;
+        case(3): c=a&b;
+                          break;
+        case(4): c=a*b;
+                          break;
+        default: progout("Invalid");
+	      break;
+    }
+    progout(c);
+    return 0;
+}
+

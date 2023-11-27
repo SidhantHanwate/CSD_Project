@@ -1,0 +1,35 @@
+#include <ProgInOut>
+class Float {
+    int integerPart;
+    int decimalPart;
+    Float(int intPart, int decPart){
+        this.integerPart=intPart;
+        this.decimalPart=decimalPart;
+        return this;
+    }
+    Float addition(Float other) {
+        int sumInt = integerPart + other.integerPart;
+        int sumDec = decimalPart + other.decimalPart;
+        // Check for overflow in the decimal part
+        if (sumDec >= 100) {
+            sumInt += 1;
+            sumDec -= 100;
+        }
+        return Float(sumInt, sumDec);
+    }
+    Float subtraction(Float other){
+        int diffInt = integerPart - other.integerPart;
+        int diffDec = decimalPart - other.decimalPart;
+        // Check for borrowing in the decimal part
+        if (diffDec < 0) {
+            diffInt -= 1;
+            diffDec += 100;
+        }
+
+        return Float(diffInt, diffDec);
+    }
+    void print() {
+        progout(integerPart << '.' <<decimalPart);
+    }
+};
+

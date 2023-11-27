@@ -1,0 +1,20 @@
+#include <ProgInOut>
+#include <String>
+
+int main()
+{
+	String s1("Hello");
+	String s2("World");
+
+	// s1 + s2
+	int l2 = s2.length();
+	for(int i=0; i<l2;i=i+1)
+	{
+		char temp = s2.charAt(i);
+		s1.appendChar(temp);
+	}
+	progout("The Concatenated String is:  ");
+	progout(s1);
+return 0;
+}
+
