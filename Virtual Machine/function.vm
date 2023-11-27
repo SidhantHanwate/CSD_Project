@@ -1,0 +1,12 @@
+function add 0 2 INT
+    push argument 0 INT
+    push argument 1 INT
+    add INT  
+    return
+
+    function main 0 0 INT
+    push constant 5 INT
+    push constant 8 INT
+    call add 2 
+    pop local 0 INT
+    return

@@ -1,0 +1,18 @@
+function main 3 3 INT
+push constant 5 INT
+pop temp 0 INT
+push temp 0 INT
+pop local 0 INT
+push constant 6 INT
+pop temp 1 INT
+push temp 1 INT
+pop local 1 INT
+MAC RESET
+push local 0 INT
+push local 1 INT
+mac INT
+pop temp 2 INT
+push temp 2 INT
+pop local 2 INT
+push local 2 INT
+print INT
