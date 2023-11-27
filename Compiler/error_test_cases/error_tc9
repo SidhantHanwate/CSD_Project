@@ -1,0 +1,11 @@
+
+int main(){
+    int a=5;
+    char b = 'c';
+    typeof b;
+    mac reset;
+    int res = a@b;
+    progout(res);
+}
+
+//MAC instruction expects only int values

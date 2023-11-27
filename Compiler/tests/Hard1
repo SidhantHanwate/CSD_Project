@@ -1,0 +1,50 @@
+#include <ProgInOut>
+#include <String>
+#include <Math>
+int main(){
+	int a[9];
+	int b[9];
+	progout("Enter the contents of matrix 1: ");
+	int i;
+	for(i=0; i<9; i=i+1){
+		int t;
+		progin(t);
+		a[i] = t;
+	}
+	progout("Enter the contents of matrix 2: ");
+
+	for(i=0; i<9; i=i+1){
+		int t;
+		progin(t);
+		b[i] = t;
+	}
+	int c[9];
+	int row;
+	for(row=0; row<3; row=row+1){
+		int col;
+		for(col=0; col<3; col=col+1){
+			int sum = 0;
+			int k;
+                  mac reset;
+			for(k=0; k<3; k=k+1){	
+				int temp1 = a[row*3+k] ;
+				int temp2 = b[k*3+col] ;
+				// mr = mr+(temp1*temp2);
+                       sum =temp1@temp2;
+                      
+			}
+			int temp6 = row*3;
+			c[temp6+col] = sum;
+		}
+	}
+	for(i=0; i<9; i=i+1){
+		progout(c[i]);
+		if((i+1)%3 == 0){
+			progout("/n");
+		}
+		else{
+			progout(" ");
+		}
+	}
+	return 0;
+}

@@ -1,9 +1,5 @@
 int multiply(int a,  int b) {
-  return a*b;  
-}
-
-int multiply(int a , int b ,int c){
-    return a*b*c;
+  int ans = a*b;  
 }
 
 
@@ -19,4 +15,4 @@ int main(){
     progout(ans);
 }
 
-// Error: Duplicate function name - multiply
+//Return stmt not there for function: multiply

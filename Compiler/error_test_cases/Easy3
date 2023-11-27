@@ -1,0 +1,21 @@
+int sub(int a, int b)
+{
+    int  res = a-b;
+    return res;
+}
+
+int main() 
+{	
+    int var1;
+    int var2;
+    progout("Enter the variable1:  ");
+    progin(var1);
+    progout("Enter the variable2:  ");
+    progin(var2);
+   int res = sub(var1,var2);
+ if ( res<0 ){ 
+    progout("var2 is greater"); }
+ else
+ { progout("var1 is greater"); }
+   return 0;
+}

@@ -1,0 +1,14 @@
+#include <ProgInOut>
+int main(){
+    int a[3]={1,2,3};
+    int b[3]={1,2,3};
+    mac reset;
+    int product=0;
+    int i;
+    for(i=0;i<3;i++){
+        product=a[i]@b[i];
+    }
+    progout("Dot Product: ");
+    progout(product);
+    return 0;
+}
